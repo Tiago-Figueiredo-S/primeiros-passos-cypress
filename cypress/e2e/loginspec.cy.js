@@ -1,4 +1,15 @@
 describe('Orange HRN', () => {
+
+  const selectorsList =  {
+    usernameField:"[name='username']",
+    passwordField: "[name='password']",
+    loginButton: '.oxd-button',
+    selectionTitleTopBar: '.oxd-topbar-header-breadcrumb > .oxd-text',
+    wrongCredencialAlert: '.oxd-alert'
+
+
+  }
+
   it('login com sucesso', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
       cy.get("[name='username']").type('Admin')
