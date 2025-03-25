@@ -30,11 +30,14 @@ class CadastroPage{
       cy.get(this.selectorList().genericField).eq(4).clear().type(' 1234 ')
       cy.get(this.selectorList().genericField).eq(5).clear().type( '4321')
       cy.get(this.selectorList().genericField).eq(6).clear().type('2025-03-03')
-      //cy.get(selectorsList.dateCloseButton).click()
       cy.get(this.selectorList().genericComboBox).eq(0).click({force: true})
       cy.get(this.selectorList().secondItenComboBox).click()
       cy.get(this.selectorList().genericComboBox).eq(1).click()
       cy.get(this.selectorList().thirdItenComboBox).click()
+    }
+
+
+    savedRegistratio() {
 
       cy.get(this.selectorList().saveButton).eq(0).click ()
       cy.get('body').should('contain', 'Successfully Updated')

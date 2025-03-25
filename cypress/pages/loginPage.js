@@ -7,6 +7,7 @@ class LoginPage {
         passwordField: "[name='password']",
         loginButton: '.oxd-button',
         wrongCredencialAlert: '.oxd-alert',
+        
 
      }
       
@@ -28,7 +29,10 @@ class LoginPage {
       cy.get(this.selectorsList().loginButton).click()
 
      }
-    
 
-}
+
+     }
+
+
+
 export default LoginPage

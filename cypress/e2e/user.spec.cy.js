@@ -14,31 +14,24 @@ const cadastroPage= new CadastroPage()
 
 
 describe('Orange HRN', () => {
-
-  const selectorsList =  {
- 
-    
   
-  }
-  
-  it.only('login com sucesso', () => {
+  it('login com sucesso', () => {
    
     loginPage.accessLoginPage()
     loginPage.loginWithUser(userDate.userSuccess.username,userDate.userSuccess.password)
     dashboard.checkPage()
     menuPage.accessMyInfo()
     cadastroPage.successFulRegistration()
+    cadastroPage.savedRegistratio()
     
 })
 
   
 
   it('login sem sucesso', () => {
-    cy.visit('/auth/login')
-      cy.get(selectorsList.usernameField).type(userDate.userFail.username)
-      cy.get(selectorsList.passwordField).type(userDate.userFail.password)
-      cy.get(selectorsList.loginButton).click()
-      cy.get(selectorsList.wrongCredencialAlert)
+    loginPage.accessLoginPage()
+    loginPage.loginWithUser(userDate.userFail.username,userDate.userFail.password)
+    
    
 })
 })
