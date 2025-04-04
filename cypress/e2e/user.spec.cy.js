@@ -23,7 +23,8 @@ describe('Orange HRN', () => {
     menuPage.accessMyInfo()
 
     registerPage.fillPersonallDetails(chance.first(),chance.last(),chance.last())
-    registerPage.fillEmployeeDetails('TI','4321','1234','2025-03-31')
+    registerPage.fillEmployeeDetails(chance.string({ length: 4 }),chance.integer({ min: 1000, max:9999 }),chance.integer({ min: 1000, max:9999 }),
+    '2025-03-31')
     registerPage.fillStatus()
     registerPage.saveForm()
     
