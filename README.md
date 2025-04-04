@@ -8,4 +8,4 @@ npm install
 ```
 > "NOTE"
 > 
-it is necessary to have "node" installed
+it is necessary to have 'node' installed
